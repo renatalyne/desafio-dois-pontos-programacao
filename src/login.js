@@ -53,16 +53,19 @@ export function validarUsuario(email, senha){
         if (email == usuario[i].email){
 
             if (senha != usuario[i].senha){
+                console.log('senha incorreta')
                 return 'senha incorreta'
             }
 
             if (usuario[i].expirado == true){
+                console.log('Renove suas credenciais')
                 return 'expirado'
             }
 
+            console.log('login realizado com sucesso')
             return 'sucesso'
         }
     }
-
+    console.log('Usuário não encontrado')
     return 'incorreto' 
 }

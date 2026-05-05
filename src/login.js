@@ -53,7 +53,7 @@ export function validarUsuario(email, senha){
         if (email == usuario[i].email){
 
             if (senha != usuario[i].senha){
-                console.log('senha incorreta')
+                console.log('Credenciais incorretas')
                 return 'senha incorreta'
             }
 
@@ -66,6 +66,6 @@ export function validarUsuario(email, senha){
             return 'sucesso'
         }
     }
-    console.log('Usuário não encontrado')
+    console.log('Credenciais incorretas')
     return 'incorreto' 
 }

@@ -18,7 +18,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configurar Node
+      - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -29,7 +29,7 @@ jobs:
       - name: Executar testes
         run: npm test > relatorio-testes.txt
 
-      - name: Salvar relatório
+      - name: Publicar relatório
         uses: actions/upload-artifact@v4
         with:
           name: relatorio-testes

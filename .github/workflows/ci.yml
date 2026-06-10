@@ -27,10 +27,10 @@ jobs:
         run: npm install
 
       - name: Executar testes
-        run: npm test > relatorio-testes.txt
+        run: npm test > relatorio-validacao-login.txt
 
       - name: Publicar relatório
         uses: actions/upload-artifact@v4
         with:
-          name: relatorio-testes
-          path: relatorio-testes.txt
+          name: relatorio-validacao-login
+          path: relatorio-validacao-login.txt

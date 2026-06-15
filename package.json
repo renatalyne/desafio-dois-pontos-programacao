@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-
-"scripts": {
-  "test": "node node_modules/mocha/bin/mocha.js test/**/*.js --reporter mochawesome --reporter-option reportDir=reports"
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha.js test/**/*.js --reporter mochawesome --reporter-option reportDir=reports"
   },
   "repository": {
     "type": "git",
@@ -21,5 +20,8 @@
   "homepage": "https://github.com/renatalyne/desafio-dois-pontos-programacao#readme",
   "dependencies": {
     "mocha": "^11.7.5"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.4"
   }
 }

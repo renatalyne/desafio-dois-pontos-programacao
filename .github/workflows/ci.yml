@@ -1,36 +1,57 @@
-name: Pipeline CI
+
+name: Pipeline CI para Validação de Login
+permissions:
+  contents: read
 
 on:
   push:
     branches:
       - main
 
+  schedule:
+    - cron: '0 23 * * *'
+
   workflow_dispatch:
 
-  schedule:
-    - cron: '0 11 * * *'
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  testes:
+  test:
+    name: Testes Unitários Automatizados
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
-      - name: Checkout
+      - name: Checkout do código
         uses: actions/checkout@v4
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
       - name: Instalar dependências
         run: npm install
 
       - name: Executar testes
-        run: npm test > relatorio-validacao-login.txt
+        run: npm test
 
-      - name: Publicar relatório
+      - name: Upload do relatório Mochawesome
+        if: ${{ always() }}
         uses: actions/upload-artifact@v4
         with:
           name: relatorio-validacao-login
-          path: relatorio-validacao-login.txt
+          path: reports/
+
+  deploy:
+    name: Simulação de Deploy
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Simular deploy
+        run: echo "Deploy realizado com sucesso!"
+

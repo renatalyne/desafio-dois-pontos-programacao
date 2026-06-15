@@ -1,0 +1,159 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-15T22:49:13.110Z",
+    "end": "2026-06-15T22:49:13.119Z",
+    "duration": 9,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3144d4e3-d69f-4799-8b36-e387c13612c2",
+      "title": "",
+      "fullFile": "C:\\projects\\desafio-dois-pontos-programacao\\test\\login.test.js",
+      "file": "\\test\\login.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b444cea7-afe4-4b25-8fbd-264f3b5a28e1",
+          "title": "Validar logins de usuários",
+          "fullFile": "C:\\projects\\desafio-dois-pontos-programacao\\test\\login.test.js",
+          "file": "\\test\\login.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validar login com sucesso",
+              "fullTitle": "Validar logins de usuários Validar login com sucesso",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//arrange\nconst email ='renata@teste.com'\nconst senha =123456\nconst status = 'sucesso'\n//act\nconst resultadoFuncao = validarUsuario(email,senha)\n//assert\nassert.equal(resultadoFuncao,status)",
+              "err": {},
+              "uuid": "2222bec0-83c1-4cdf-8c4e-378c119950b7",
+              "parentUUID": "b444cea7-afe4-4b25-8fbd-264f3b5a28e1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar login expirado",
+              "fullTitle": "Validar logins de usuários Validar login expirado",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//arrange\nconst email ='alice@teste.com'\nconst senha =321456\nconst status = 'expirado'\n//act\nconst resultadoFuncao = validarUsuario(email,senha)\n//assert\nassert.equal(resultadoFuncao,status)",
+              "err": {},
+              "uuid": "34992e2c-a9cb-4d73-a66b-594aa261ebb5",
+              "parentUUID": "b444cea7-afe4-4b25-8fbd-264f3b5a28e1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar login com senha incorreta",
+              "fullTitle": "Validar logins de usuários Validar login com senha incorreta",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//arrange\nconst email ='renata@teste.com'\nconst senha =258963\nconst status = 'senha incorreta'\n//act\nconst resultadoFuncao = validarUsuario(email,senha)\n//assert\nassert.equal(resultadoFuncao,status)",
+              "err": {},
+              "uuid": "a429461e-1b28-4278-b583-ae1488a3431d",
+              "parentUUID": "b444cea7-afe4-4b25-8fbd-264f3b5a28e1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validar usuário não encontrado",
+              "fullTitle": "Validar logins de usuários Validar usuário não encontrado",
+              "timedOut": false,
+              "duration": 0,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//arrange\nconst email ='renataAlice@teste.com'\nconst senha =258963\nconst status = 'incorreto'\n//act\nconst resultadoFuncao = validarUsuario(email,senha)\n//assert\nassert.equal(resultadoFuncao,status)",
+              "err": {},
+              "uuid": "03aaa4f8-cabc-43d5-bcc2-0b86bc58013c",
+              "parentUUID": "b444cea7-afe4-4b25-8fbd-264f3b5a28e1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2222bec0-83c1-4cdf-8c4e-378c119950b7",
+            "34992e2c-a9cb-4d73-a66b-594aa261ebb5",
+            "a429461e-1b28-4278-b583-ae1488a3431d",
+            "03aaa4f8-cabc-43d5-bcc2-0b86bc58013c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports"
+      },
+      "version": "6.3.2"
+    }
+  }
+}

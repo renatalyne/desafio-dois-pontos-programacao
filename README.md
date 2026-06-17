@@ -36,10 +36,10 @@ Após a validação do código, são executados os testes automatizados utilizan
 
 Os cenários testados são:
 
-- Login realizado com sucesso
-- Credencial expirada
-- Senha incorreta
-- Usuário não encontrado
+- Validar login com sucesso
+- Validar login expirado
+- Validar login com senha incorreta
+- Validar usuário não encontrado
 
 ### 3. Geração do Relatório
 

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
     "test": "node node_modules/mocha/bin/mocha.js test/**/*.js --reporter mochawesome --reporter-option reportDir=reports"
   },
   "repository": {
@@ -22,6 +23,9 @@
     "mocha": "^11.7.5"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.5.0",
+    "globals": "^17.6.0",
     "mochawesome": "^7.1.4"
   }
 }
